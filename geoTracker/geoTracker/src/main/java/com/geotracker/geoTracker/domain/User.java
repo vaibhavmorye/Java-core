@@ -7,10 +7,6 @@ import javax.persistence.*;
 @Entity
 public class User extends BaseEntity {
 
-    @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private long Id;
-
     @Column
     private String firstName;
     @Column
@@ -24,14 +20,6 @@ public class User extends BaseEntity {
     private long salary;
     @Column
     private int age;
-
-    public long getId() {
-        return Id;
-    }
-
-    public void setId(long id) {
-        this.Id = id;
-    }
 
     public String getFirstName() {
         return firstName;
